@@ -54,7 +54,68 @@ nx serve mainApp
 nx graph
 ```
 
+## Nx naming conversions
+
+## 1. Applications
+
+- Use kebab-case.
+
+```
+main-app
+```
+
 ## React
+
+## Naming Conversions
+
+### 1. Components
+
+- Use PascalCase
+- Name components based on their function or purpose.
+
+```
+function UserProfile() { ... }
+export default UserProfile;
+```
+
+### 2. Folders
+
+- Use kebab-case
+
+```
+components/
+  user-profile/
+    user-profile.jsx
+    user-profile.module.css
+```
+
+### 3. Files
+
+- Name your files using PascalCase, matching the component name. For example, if you have a component named UserCard, the file should be named UserCard.js.
+
+### 4. Variables, Props, State Variables
+
+- Use camelCase
+
+```
+const userName = 'John Doe';
+const isLoggedIn = true;
+
+<UserProfile userName="John" isLoggedIn={true} />
+
+const [isModalOpen, setIsModalOpen] = useState(false);
+
+const handleSubmit = () => { ... };
+const isAuthenticated = () => { ... };
+```
+
+### 5. API Functions
+
+- Use verbs to describe the action, such as get, fetch, post, or update.
+
+```
+async function fetchUserData() { ... }
+```
 
 ## State Management
 
